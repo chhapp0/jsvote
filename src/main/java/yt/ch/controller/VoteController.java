@@ -23,7 +23,7 @@ public class VoteController {
     @RequestMapping(value = "/vote",method= RequestMethod.GET)
     @ResponseBody
     public String vote(HttpServletRequest request,@RequestParam Integer[] params,@RequestParam String name,@RequestParam String tel){
-        String code = voteService.vote(request,params);
+        String code = voteService.vote(request,params,name,tel);
         return code;
     }
 
