@@ -9,7 +9,7 @@ spring:
 #    #使用druid数据源
 #    type: com.alibaba.druid.pool.DruidDataSource
 #    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:mysql://localhost:3306/vote?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://101.37.125.107:3306/vote?characterEncoding=utf8&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver

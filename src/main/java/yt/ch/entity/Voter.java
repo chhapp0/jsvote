@@ -19,6 +19,26 @@ public class Voter implements Serializable{
     private String ip;
     @Column
     private Integer count;
+    @Column
+    private String name;
+    @Column
+    private String tel;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 
     public Long getId() {
         return id;

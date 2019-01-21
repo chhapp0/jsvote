@@ -27,7 +27,7 @@ public class VoteServiceImpl implements VoteService{
     private VoterVoteRepository voterVoteRepository;
 
     @Override
-    public String vote(HttpServletRequest request,Integer[] params) {
+    public String vote(HttpServletRequest request,Integer[] params,String name,String tel) {
         if(params.length>100){
             return "100";
         }
@@ -37,6 +37,8 @@ public class VoteServiceImpl implements VoteService{
             Voter newVoter = new Voter();
             newVoter.setIp(ip);
             newVoter.setCount(params.length);
+            newVoter.setName(name);
+            newVoter.setTel(tel);
             voteRepository.save(newVoter);
             Long vid = voteRepository.findByIp(ip).getId();
             List<VoterVote> voterVotes = new ArrayList<>();
